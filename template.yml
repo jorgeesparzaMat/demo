@@ -18,7 +18,7 @@ Parameters:
 #       Enabled: true
 #       Type: Canary10Percent5Minutes
 
-Resources:
+Resources:  
   GetHelloWorld:
     Type: AWS::Serverless::Function
     Properties:
@@ -48,3 +48,10 @@ Resources:
           Properties:
             Path: /
             Method: post
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-d94486a9
+        SubnetIds:
+          - subnet-cc521996
+          - subnet-55fe812c
+          - subnet-5eed7515
