@@ -48,3 +48,10 @@ Resources:
           Properties:
             Path: /
             Method: post
+      vpc:
+        SecurityGroupIds:
+          - sg-d94486a9
+        SubnetIds:
+          - subnet-cc521996
+          - subnet-55fe812c
+          - subnet-5eed7515
