@@ -6,7 +6,7 @@ Transform:
 Parameters:
   ProjectId:
     Type: String
-    Description: AWS CodeStar projectID used to associat new resources to team members
+    Description: AWS CodeStar projectID used to associate new resources to team members
 
 # Enable blue/green deployments using this Globals section. For instructions, see the AWS CodeStar User Guide:
 # https://docs.aws.amazon.com/codestar/latest/userguide/how-to-modify-serverless-project.html?icmpid=docs_acs_rm_tr
@@ -35,7 +35,8 @@ Resources:
             Method: post
       VpcConfig:
         SecurityGroupIds:
-          - sg-0ddfe9f0120660864
+          - sg-d94486a9
         SubnetIds:
-          - subnet-056ed296348f97d47
-          - subnet-0f9e24678903a7a62
+          - subnet-cc521996
+          - subnet-55fe812c
+          - subnet-5eed7515
