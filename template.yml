@@ -19,21 +19,6 @@ Parameters:
 #       Type: Canary10Percent5Minutes
 
 Resources:  
-  GetHelloWorld:
-    Type: AWS::Serverless::Function
-    Properties:
-      Handler: com.aws.codestar.projecttemplates.handler.HelloWorldHandler
-      Runtime: java8
-      Role:
-        Fn::ImportValue:
-          !Join ['-', [!Ref 'ProjectId', !Ref 'AWS::Region', 'LambdaTrustRole']]
-      Events:
-        GetEvent:
-          Type: Api
-          Properties:
-            Path: /
-            Method: get
-
   PostHelloWorld:
     Type: AWS::Serverless::Function
     Properties:
@@ -49,7 +34,6 @@ Resources:
             Path: /
             Method: post
       VpcConfig:
-        VpcId: vpc-938c6aeb
         SecurityGroupIds:
           - sg-d94486a9
         SubnetIds:
